@@ -1,0 +1,10 @@
+# gitignore
+node_modules
+
+.history
+
+.cache
+
+dist
+
+
