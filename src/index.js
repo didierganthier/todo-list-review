@@ -9,11 +9,13 @@ let todosArray = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem
 const getValueFromInput = () => {
   const todoValue = inputTodo.value;
   inputTodo.value = '';
+  alert(todoValue)
   return todoValue;
 };
 
 const createTodo = (todoValue) => {
   const todo = document.createElement('li');
+  console.log(todo);
   todo.classList.add('item');
   todo.innerHTML = `
   <div>
