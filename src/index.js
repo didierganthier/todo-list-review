@@ -1,5 +1,5 @@
-import { clearAllCompleted, checkTodo } from '../modules/checkAndClear.js';
-import editTodo from '../modules/editTodo.js';
+import { clearAllCompleted, checkTodo } from '../modules/checkAndClear';
+import editTodo from '../modules/editTodo';
 import './style.css';
 
 const todoList = document.querySelector('.wrapper');
@@ -9,7 +9,7 @@ let todosArray = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem
 const getValueFromInput = () => {
   const todoValue = inputTodo.value;
   inputTodo.value = '';
-  alert(todoValue)
+  alert(todoValue);
   return todoValue;
 };
 
