@@ -9,7 +9,6 @@ let todosArray = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem
 const getValueFromInput = () => {
   const todoValue = inputTodo.value;
   inputTodo.value = '';
-  alert(todoValue);
   return todoValue;
 };
 
@@ -34,7 +33,7 @@ const createTodoFromTheLocalStorage = () => {
     todosArray = [];
     todos.forEach((todo) => {
       todosArray.push({
-        index: todo.id,
+        index: todo.index,
         description: todo.description,
         completed: todo.completed,
       });
@@ -74,7 +73,6 @@ const deleteTodo = () => {
         });
         todosArray = todos;
         localStorage.setItem('todos', JSON.stringify(todos));
-        console.log(todos);
         // Reload the page
         window.location.reload();
       });
@@ -104,7 +102,6 @@ window.onload = () => {
 
 // Reload the page whenever the innerHTML of the todo list changes
 todoList.addEventListener('DOMSubtreeModified', () => {
-  alert('DOM Modified');
   editTodo(todosArray);
   checkTodo(todosArray);
 });
