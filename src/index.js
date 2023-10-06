@@ -1,5 +1,5 @@
-import { clearAllCompleted, checkTodo } from '../modules/checkAndClear.js';
-import editTodo from '../modules/editTodo.js';
+import { clearAllCompleted, checkTodo } from '../modules/checkAndClear';
+import editTodo from '../modules/editTodo';
 import './style.css';
 
 const todoList = document.querySelector('.wrapper');
@@ -14,6 +14,7 @@ const getValueFromInput = () => {
 
 const createTodo = (todoValue) => {
   const todo = document.createElement('li');
+  console.log(todo);
   todo.classList.add('item');
   todo.innerHTML = `
   <div>
